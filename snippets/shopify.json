@@ -1,0 +1,53 @@
+{
+  "React Test": {
+    "prefix": ["react-test", "rt"],
+    "body": [
+      "import React from 'react';",
+      "",
+      "import {mount} from '@shopify/react-testing';",
+      "",
+      "import {${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}, Props} from './${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}'",
+      "",
+      "const defaultProps: Props = {",
+      "  children: '${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}',",
+      "};",
+      "",
+      "describe('<${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/} />', () => {",
+      "  describe('children', () => {",
+      "    it('renders the children', () => {",
+      "      const component = mount(<{${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/} {...defaultProps}>);",
+      "",
+      "      expect(component).toContainReactText(text);",
+      "    });",
+      "  });",
+      "});"
+    ],
+    "description": "React component Test with @shopify/react-testing"
+  },
+  "Import Checkout-web-ui": {
+    "prefix": ["import-checkout", "imc"],
+    "description": "Import Checkout-web-ui",
+    "body": ["import {$0 from '@shopify/checkout-web-ui';"]
+  },
+  "Mount Shopify Testing": {
+    "prefix": ["mount-react", "mtr"],
+    "description": "Mount component with Shopify testing",
+    "body": [
+      "const ${0:component} = mount(<${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/} {...defaultProps} />);"
+    ]
+  },
+  "Expect React component": {
+    "prefix": ["expect-react", "expr"],
+    "description": "Expect to contain React component",
+    "body": [
+      "expect(${1:component}).toContainReactComponent(${2:Component}, {",
+      "  ${0:children: 'something',",
+      "});"
+    ]
+  },
+  "I18n": {
+    "prefix": ["i18n"],
+    "description": "I18n",
+    "body": ["i18n.translate('${0:Something}')"]
+  }
+}

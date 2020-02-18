@@ -1,0 +1,29 @@
+{
+  "React Import": {
+    "prefix": ["react-import", "import-react", "imr"],
+    "body": ["import React from 'react';"],
+    "description": "Import React"
+  },
+  "React Component": {
+    "prefix": ["react-component", "rc"],
+    "body": [
+      "import React from 'react';",
+      "",
+      "export interface Props {",
+      "  children: React.ReactNode;",
+      "}",
+      "",
+      "export function ${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}({children}: Props) {",
+      "  return <div>{children}</div>",
+      "}"
+    ],
+    "description": "React component with Props"
+  },
+  "CSS Module Class Name": {
+    "prefix": ["className", "cn"],
+    "body": [
+      "className={styles$0}"
+    ],
+    "description": "React className prop"
+  }
+}

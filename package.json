@@ -1,0 +1,41 @@
+{
+  "name": "snip-snip",
+  "displayName": "snip-snip",
+  "description": "🔥 snippets",
+  "publisher": "alxclark",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alxclark/snip-snip"
+},
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.42.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/utilities.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/utilities.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/shopify.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/shopify.json"
+      }
+    ]
+  }
+}
