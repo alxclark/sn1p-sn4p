@@ -1,11 +1,12 @@
 {
-  "name": "snip-snip",
-  "displayName": "snip-snip",
-  "description": "🔥 snippets",
+  "name": "sn1p-sn4p",
+  "displayName": "sn1p-sn4p",
+  "description": "A curated collection of Visual Studio Code snippets.",
   "publisher": "alxclark",
+  "icon": "sn1p-sn4p.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alxclark/snip-snip"
+    "url": "https://github.com/alxclark/sn1p-sn4p"
 },
   "version": "0.0.1",
   "engines": {
@@ -18,11 +19,11 @@
     "snippets": [
       {
         "language": "typescript",
-        "path": "./snippets/utilities.json"
+        "path": "./snippets/typescript.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./snippets/utilities.json"
+        "path": "./snippets/typescript.json"
       },
       {
         "language": "typescriptreact",

@@ -1,0 +1,12 @@
+{
+  "Console log": {
+    "prefix": ["clg"],
+    "body": ["console.log($0);"],
+    "description": "Console log"
+  },
+  "Arrow function": {
+    "prefix": ["arrow", "arrow-func", "af"],
+    "body": ["(${1|one,two,three|}) => {$0}"],
+    "description": "Arrow function"
+  }
+}

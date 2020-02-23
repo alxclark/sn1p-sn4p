@@ -25,5 +25,20 @@
       "className={styles$0}"
     ],
     "description": "React className prop"
+  },
+  "CSS Module styles": {
+    "prefix": ["import-styles", "ims"],
+    "body": ["import styles from './${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}';"],
+    "description": "Import CSS module styles"
+  },
+  "Export React component": {
+    "prefix": ["export-react", "exr"],
+    "body": ["export {${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}, Props} from './${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}';"],
+    "description": "Export React component"
+  },
+  "Export-rename React component": {
+    "prefix": ["reexport-react", "rexr"],
+    "body": ["export {$0, Props as $0} from './$0';"],
+    "description": "Export rename React component"
   }
 }
