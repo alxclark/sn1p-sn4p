@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/alxclark/sn1p-sn4p"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.42.0"
   },
