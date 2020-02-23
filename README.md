@@ -13,7 +13,6 @@ Minimal set of snippets for Visual Studio Code 🦄
 | ------- | -------------------------------- |
 | `import-react` / `imr` / `react-import`   | Import React |
 | `react-component` / `rc`  | Scaffold a function component |
-| `react-component`  | Scaffold a function component |
 | `export-react` / `exr`  | React component export |
 | `reexport-react` / `rexr`  | React component export and rename |
 | `className` / `cn`  | CSS Modules ClassName |
