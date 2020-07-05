@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/alxclark/sn1p-sn4p"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.42.0"
   },
@@ -27,6 +27,10 @@
       },
       {
         "language": "typescriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "typescript",
         "path": "./snippets/react.json"
       },
       {

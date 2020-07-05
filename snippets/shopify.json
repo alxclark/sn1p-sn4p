@@ -3,10 +3,9 @@
     "prefix": ["react-test", "rt"],
     "body": [
       "import React from 'react';",
-      "",
       "import {mountWithAppContext} from 'tests/utilities';",
       "",
-      "import {${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}, Props} from './${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}'",
+      "import {${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}, Props} from './${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}';",
       "",
       "const defaultProps: Props = {",
       "  children: '${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}',",
@@ -15,14 +14,14 @@
       "describe('<${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/} />', () => {",
       "  describe('children', () => {",
       "    it('renders the children', () => {",
-      "      const component = mount(<${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/} {...defaultProps} />);",
+      "      const component = mountWithAppContext(<${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/} {...defaultProps} />);",
       "",
       "      expect(component).toContainReactComponent(children);",
       "    });",
       "  });",
       "});"
     ],
-    "description": "React component Test with @shopify/react-testing"
+    "description": "React component Test with mountWithAppContext"
   },
   "Import Checkout-web-ui": {
     "prefix": ["import-checkout", "imc"],
@@ -45,9 +44,24 @@
       "});"
     ]
   },
-  "I18n": {
-    "prefix": ["i18n", "react-i18n"],
+  "I18n import": {
+    "prefix": ["import-i18n"],
+    "description": "Import i18n utilities",
+    "body": ["import {useTranslate} from '@shopify/checkout-i18n';"]
+  },
+  "I18n useTranslate": {
+    "prefix": ["useTranslate", "ut"],
     "description": "I18n",
-    "body": ["i18n.translate('${0:Something}')"]
+    "body": ["const translate = useTranslate();"]
+  },
+  "I18n translate app": {
+    "prefix": ["translate-app", "ta"],
+    "description": "I18n translate app",
+    "body": ["translate('app.${0:Something}')"]
+  },
+  "I18n translate merchant": {
+    "prefix": ["translate-merchant", "tm"],
+    "description": "I18n translate merchant",
+    "body": ["translate('merchant.${0:Something}')"]
   }
 }
